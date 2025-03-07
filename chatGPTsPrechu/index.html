@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prechu - Minimal Responsive Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #3498db;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            padding: 0;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        nav .active {
+            border-bottom: 2px solid #3498db;
+        }
+
+        .hero {
+            background: url('hero-image.jpg') no-repeat center center/cover;
+            color: white;
+            padding: 100px 20px;
+        }
+
+        .hero-content {
+            max-width: 600px;
+            margin: auto;
+        }
+
+        button {
+            background: #3498db;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .features {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            padding: 40px 20px;
+        }
+
+        .feature {
+            text-align: center;
+            max-width: 200px;
+        }
+
+        .icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+            color: white;
+        }
+
+        .blue { background: #3498db; }
+        .red { background: #e74c3c; }
+        .yellow { background: #f1c40f; }
+
+        .shopping-cart {
+            padding: 40px 20px;
+        }
+
+        .shopping-cart .content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .shopping-cart img {
+            width: 150px;
+        }
+
+        footer {
+            background: #f1f1f1;
+            padding: 20px;
+            margin-top: 40px;
+        }
+        @media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hero {
+        padding: 50px 20px;
+    }
+
+    .features {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature {
+        max-width: 100%;
+    }
+
+    .shopping-cart .content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .shopping-cart img {
+        width: 100px;
+    }
+}
+
+/* Tablets and small desktops (768px - 1024px) */
+@media (max-width: 1024px) {
+    .features {
+        gap: 20px;
+    }
+
+    .shopping-cart .content {
+        flex-direction: column;
+    }
+}
+
+/* Large desktops (above 1200px) */
+@media (min-width: 1200px) {
+    .hero {
+        padding: 120px 20px;
+    }
+
+    .shopping-cart img {
+        width: 200px;
+    }
+}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">&#8226; Prechu</div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#" class="active">Products</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Lorem Ipsum is simply</h1>
+            <p>dummy text of the printing &amp; typesetting</p>
+            <button>Sign up now</button>
+        </div>
+    </section>
+    
+    <section class="features">
+        <div class="feature">
+            <div class="icon blue"><span>&#9998;</span></div>
+            <h3>Contrary to popular</h3>
+            <p>Lorem Ipsum is not simply random text. It has roots in a piece</p>
+        </div>
+        <div class="feature">
+            <div class="icon red"><span>&#128187;</span></div>
+            <h3>Contrary to popular</h3>
+            <p>Lorem Ipsum is not simply random text. It has roots in a piece</p>
+        </div>
+        <div class="feature">
+            <div class="icon yellow"><span>&#128722;</span></div>
+            <h3>Contrary to popular</h3>
+            <p>Lorem Ipsum is not simply random text. It has roots in a piece</p>
+        </div>
+    </section>
+    
+    <section class="shopping-cart">
+        <h2>The Shopping Cart</h2>
+        <div class="content">
+            <img src="cart.png" alt="Shopping Cart">
+            <div class="text">
+                <h3>Some Bullet text here</h3>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry...</p>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <p>Copyright &copy; 2012-2013 cssauthor.com</p>
+    </footer>
+</body>
+</html>
